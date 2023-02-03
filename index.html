@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">	
+	<title>Front-End Essencial</title>
+	<meta name="description" content="curso de desenvolvimento de sites front end e back end">
+	<meta name="robots" content="all">
+	<meta name="author" content="Tiago Alves Garcao">
+	<meta name="keywords" content="Informática, desenvolvimento de sites, html, css, javacript, frontend, backend, cursos de desenvolvimento web, desenvolvimento de sites">
+</head>
+
+<body>
+
+	<header>
+
+		<h2 class="sistemas">Sistemas</h2>
+		<h1 class="MKS">MKS</h1>
+		<a  href="#"  onclick="abrircarrinho()" class="glyphicon glyphicon-shopping-cart">0</a>	
+
+	</header>
+	<nav class="comprar" id="carrinho">
+
+		<a href="#" class="fechar" onclick="fecharcarrinho()">x</a>
+
+		
+			<h4>Carrinho de compras</h4>
+
+			<aside>
+				<form class="item">
+						<img src="img/Watch.png">
+						<p>Apple Watch Series 4 GPS</p>
+						<q>R$399</q>
+				</form>	
+				<a href="#"  class="item"></a>
+				
+			</aside>
+			
+			<h4 class="total">Total:</h4>
+			<h4 class="resultado">R$798:</h4>
+			
+           	<p >Finalizar Compra</p>
+		
+	</nav>
+	
+         <aside class="container" id="conteudo">
+          
+				<section >
+						
+					<div class="card">
+
+						<article>
+							
+								<img src="img/Watch.png">
+							<div >
+								<sup class="preco">R$399</sup>
+								<sub>Apple Watch 4 GPS</sub>	
+								<p> Redesigned from scratch and completely revised.</p>			
+						
+								<nav>
+									<button class="grid">COMPRE</button>
+								</nav>	
+								
+					  		</div>
+						</article>	
+
+						<article>
+								<img src="img/JBL.png">
+							<div >
+								<sup class="preco">R$199</sup>
+								<sub>JBL Speaker</sub>								
+								<p> Redesigned from scratch and completely revised.</p>
+
+								<nav>
+									<button class="grid">COMPRE</button>
+								</nav>
+								
+							</div>		
+						</article>	
+
+						<article>
+								<img src="img/Apple Iphone.png">
+							<div>
+								<sup class="preco">R$899</sup>
+								<sub>Apple iPhoneX 128GB</sub>	
+								<p> Redesigned from scratch and completely revised.</p>
+
+								<nav>
+									<button class="grid">COMPRE</button>
+								</nav>
+							</div>			
+						</article>
+
+						<article>
+								<img src="img/Beats.png">
+							<div>
+								<sup class="preco">R$459</sup>
+								<sub>Beats Headphones</sub>									
+								<p> Redesigned from scratch and completely revised.</p>
+
+								<nav>
+									<button class="grid">COMPRE</button>
+								</nav>
+							</div>		
+						</article>		
+
+						<article>
+								<img src="img/Apple Macbook.png">
+							<div>	
+								<sup class="preco">R$2.499</sup>
+								<sub>Apple Macbook Pro</sub>								
+								<p> Redesigned from scratch and completely revised.</p>
+
+								<nav>
+									<button class="grid">COMPRE</button>
+								</nav>
+								
+							</div>		
+						</article>	
+
+						<article>
+								<img src="img/Apple Ipad Pro.png">
+							<div>
+								<sup class="preco">R$899</sup>
+								<sub>Apple iPad Pro 64GB</sub>							
+								<p> Redesigned from scratch and completely revised.</p>
+								
+								<nav>
+									<button class="grid">COMPRE</button>
+								</nav>
+							</div>	
+						</article>		
+
+						<article>
+								<img src="img/HomePod.png">
+							<div>	
+								<sup class="preco">R$399</sup>
+								<sub>Apple Homepod</sub>								
+								<p> Redesigned from scratch and completely revised.</p>
+								<nav>
+									<button class="grid">COMPRE</button>
+								</nav>
+							</div>
+						</article>			
+
+						<article>
+								<img src="img/JBuds.png">
+							<div>	
+								<sup class="preco">R$249</sup>
+								<sub>JBuds Air Wireless</sub>							
+								<p> Redesigned from scratch and completely revised.</p>
+								<nav>
+									<fieldset>
+										<button class="grid">COMPRE</button>
+										<input class="grid" type="button" value="COMPRE">
+										<input type="button" value="SELECIONADO">
+										<input type="button">
+									
+										<input type="button" value="Start machine" accesskey="s">
+									 	 
+									 	 <p>The machine is stopped.</p>
+									 	 <input type="button" value="Disable me" disabled>
+									  
+									
+										<input type="button" value="Start machine">
+									</fieldset>
+									  <p>The machine is stopped.</p>
+								</nav>
+							</div>	
+						</article>			
+
+					</div>
+		</aside> 
+	<script>
+
+			function abrircarrinho() {
+				document.getElementById('carrinho').style.width = '486px';
+				document.getElementById('conteudo').style.marginLeft = '486px';
+			}
+
+			function fecharcarrinho() {
+				document.getElementById('carrinho').style.width = '0px';
+				document.getElementById('conteudo').style.marginLeft = '0px';
+			}
+		</script>
+			<script>
+			const button = document.querySelector('input');
+const paragraph = document.querySelector('p');
+
+button.addEventListener('click', updateButton);
+
+function updateButton() {
+  if (button.value === 'Start machine') {
+    button.value = 'Stop machine';
+    paragraph.textContent = 'The machine has started!';
+  } else {
+    button.value = 'Start machine';
+    paragraph.textContent = 'The machine is stopped.';
+  }
+}
+	</script>
+	
+	<footer>
+		<h5>MKS sistemas © Todos os direitos reservados</h5>
+	</footer>
+
+</body>
+</html>
